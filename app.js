@@ -36,8 +36,6 @@ function createNewTaskElement(taskString) {
 }
 
 function addTask() {
-  console.log('Add Task...');
-
   if (!taskInput.value) return;
 
   const listItem = createNewTaskElement(taskInput.value);
@@ -48,9 +46,6 @@ function addTask() {
 }
 
 function editTask() {
-  console.log('Edit Task...');
-  console.log('Change \'edit\' to \'save\'');
-
   const listItem = this.parentElement;
   const editInput = listItem.querySelector('.tasks__input-text');
   const label = listItem.querySelector('.tasks__label');
@@ -73,16 +68,12 @@ function editTask() {
 }
 
 function deleteTask() {
-  console.log('Delete Task...');
-
   const listItem = this.parentElement;
 
   listItem.remove();
 }
 
 function taskCompleted() {
-  console.log('Complete Task...');
-
   const listItem = this.parentElement;
   const label = listItem.querySelector('.tasks__label');
 
@@ -92,8 +83,6 @@ function taskCompleted() {
 }
 
 function taskIncomplete() {
-  console.log('Incomplete Task...');
-
   const listItem = this.parentElement;
   const label = listItem.querySelector('.tasks__label');
 
@@ -110,8 +99,6 @@ addButton.addEventListener('click', addTask);
 addButton.addEventListener('click', ajaxRequest);
 
 function bindTaskEvents(taskListItem, checkBoxEventHandler) {
-  console.log('bind list item events');
-
   const checkBox = taskListItem.querySelector('.tasks__input-checkbox');
   const editButton = taskListItem.querySelector('.tasks__edit-button');
   const deleteButton = taskListItem.querySelector('.tasks__remove-button');
