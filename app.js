@@ -26,11 +26,9 @@ function createNewTaskElement(taskString) {
   deleteButton.className = 'tasks__remove-button button';
   deleteButton.append(deleteButtonImg);
 
-  listItem.append(checkBox);
-  listItem.append(label);
-  listItem.append(editInput);
-  listItem.append(editButton);
-  listItem.append(deleteButton);
+  [checkBox, label, editInput, editButton, deleteButton].forEach(e => {
+    listItem.append(e);
+  });
 
   return listItem;
 }
